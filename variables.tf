@@ -6,7 +6,7 @@ variable "name" {
 
 variable "repository" {
   type        = string
-  default     = "https://github.com/opsstation/terraform-aws-s3"
+  default     = "https://github.com/opsstation/terraform-aws-db"
   description = "Terraform current module repo"
 }
 
