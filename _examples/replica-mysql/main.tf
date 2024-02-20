@@ -18,7 +18,7 @@ module "subnets" {
   label_order = ["environment", "name"]
 
   availability_zones = ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
-  vpc_id             = module.vpc.vpc_id
+  vpc_id             = module.vpc.id
   type               = "public"
   igw_id             = module.vpc.igw_id
   cidr_block         = module.vpc.vpc_cidr_block
@@ -52,7 +52,7 @@ module "mysql" {
   backup_window      = "03:00-06:00"
   multi_az           = true
 
-  vpc_id        = module.vpc.vpc_id
+  vpc_id        = module.vpc.id
   allowed_ip    = [module.vpc.vpc_cidr_block]
   allowed_ports = [3306]
 
