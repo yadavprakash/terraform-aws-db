@@ -214,49 +214,7 @@ module "mysql" {
   ssm_parameter_endpoint_enabled  = true
 }
 ```
-## Module Inputs
 
-- `name`: A name for your db.
-- `engine`: The database engine to use.
-- `engine_version`: The engine version to use.
-- `instance_class` :  The instance type of the RDS instance.
-- `engine_name` : The name of the database to create when the DB instance is created.
-- `allocated_storage` : The allocated storage in gibibytes.
-- `db_name` : The name of the database to create when the DB instance is created.
-- `username` :  Username for the master DB user.
-- `passwoed` : Password for the master DB user.
-- `port` :The port on which the DB accepts connections.
-- `maintenance_window` :  The window to perform maintenance in.
-- `backup_window` : The daily time range (in UTC) during which automated backups are created if they are enabled.
-- `multi_az` :  Specifies if the RDS instance is multi-AZ
-- `enabled_cloudwatch_logs_exports` :  Set of log types to enable for exporting to CloudWatch logs.
-- `major_engine_version` : Specifies the major version of the engine that this option group should be associated with.
-- `allocated_storage` :  The allocated storage in gibibytes.
-- `multi_az` :  Specifies if the RDS instance is multi-AZ
-- `backup_retention_period`: The days to retain backups for.
-- `identifier` :  The name of the RDS instance, if omitted, Terraform will assign a random, unique identifier.
-- `snapshot_identifier` : Specifies whether or not to create this database from a snapshot.
-
-- For security group settings, you can configure the ingress and egress rules using variables like:
-
-## Module Outputs
-- `db_instance_arn` : The ARN of the RDS instance.
-- `db_instance_availability_zone`: The availability zone of the RDS instance.
-- `db_instance_endpoint` : The connection endpoint.
-- `db_instance_engine`: The database engine.
-- `db_instance_id` : The RDS instance ID.
-- `db_instance_address` : db_instance_address.
-- `db_instance_hosted_zone_id` : The canonical hosted zone ID of the DB instance.
-- `db_instance_status` : The RDS instance status
-- `db_instance_name` : The database name
-- `master_db_instance_resource_id` : The RDS Resource ID of this instance.
-- `master_db_instance_username` : The master username for the database.
-- `master_db_instance_password` : The database password.
-- `master_db_instance_port` : The database port.
-- `master_db_subnet_group_id` : The db subnet group name.
-- `master_db_instance_cloudwatch_log_groups` : Map of CloudWatch log groups created and their attributes.
-
-- Other relevant security group outputs (modify as needed).
 
 ## Example
 For detailed examples on how to use this module, please refer to the '[example](https://github.com/opsstation/terraform-aws-db/tree/master/_examples)' directory within this repository.
@@ -266,6 +224,7 @@ Your Name Replace '[License Name]' and '[Your Name]' with the appropriate licens
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/opsstation/terraform-aws-db/blob/master/LICENSE) file for details.
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
