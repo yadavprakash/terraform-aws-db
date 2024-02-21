@@ -217,7 +217,7 @@ module "mysql" {
 
 
 ## Example
-For detailed examples on how to use this module, please refer to the '[example](https://github.com/opsstation/terraform-aws-db/tree/master/_examples)' directory within this repository.
+For detailed examples on how to use this module, please refer to the [example](https://github.com/opsstation/terraform-aws-db/tree/master/_examples) directory within this repository.
 
 ## Author
 Your Name Replace '[License Name]' and '[Your Name]' with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
