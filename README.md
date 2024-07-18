@@ -20,7 +20,7 @@ To use this module, you can include it in your Terraform configuration. Here's a
 
 ```hcl
 module "mariadb" {
-  source                          = "git::https://github.com/opsstation/terraform-aws-db.git?ref=v1.0.0"
+  source                          = "git::https://github.com/yadavprakash/terraform-aws-db.git?ref=v1.0.0"
   name                            = "mariadb"
   environment                     = "test"
   label_order                     = ["environment", "name"]
@@ -52,7 +52,7 @@ module "mariadb" {
 ## Example: mysql-complete
 ```hcl
 module "mysql" {
-  source                          = "git::https://github.com/opsstation/terraform-aws-db.git?ref=v1.0.0"
+  source                          = "git::https://github.com/yadavprakash/terraform-aws-db.git?ref=v1.0.0"
   name                            = "mysql"
   environment                     = "test"
   label_order                     = ["environment", "name"]
@@ -111,7 +111,7 @@ module "mysql" {
 ## Example: oracle_db
 ```hcl
 module "oracle" {
-  source                              = "git::https://github.com/opsstation/terraform-aws-db.git?ref=v1.0.0"
+  source                              = "git::https://github.com/yadavprakash/terraform-aws-db.git?ref=v1.0.0"
   name                                = "oracle"
   environment                         = "test"
   label_order                         = ["environment", "name"]
@@ -145,7 +145,7 @@ module "oracle" {
 ## Example: postgreSQL
 ```hcl
 module "postgresql" {
-  source                          = "git::https://github.com/opsstation/terraform-aws-db.git?ref=v1.0.0"
+  source                          = "git::https://github.com/yadavprakash/terraform-aws-db.git?ref=v1.0.0"
   name                            = "postgresql"
   environment                     = "test"
   label_order                     = ["environment", "name"]
@@ -178,7 +178,7 @@ module "postgresql" {
 ## Example: replica-mysql
 ```hcl
 module "mysql" {
-  source                          = "git::https://github.com/opsstation/terraform-aws-db.git?ref=v1.0.0"
+  source                          = "git::https://github.com/yadavprakash/terraform-aws-db.git?ref=v1.0.0"
   name                            = "rds"
   environment                     = "test"
   label_order                     = ["environment", "name"]
@@ -217,13 +217,13 @@ module "mysql" {
 
 
 ## Example
-For detailed examples on how to use this module, please refer to the [example](https://github.com/opsstation/terraform-aws-db/tree/master/_examples) directory within this repository.
+For detailed examples on how to use this module, please refer to the [example](https://github.com/yadavprakash/terraform-aws-db/tree/master/_examples) directory within this repository.
 
 ## Author
 Your Name Replace '[License Name]' and '[Your Name]' with the appropriate license and your information. Feel free to expand this README with additional details or usage instructions as needed for your specific use case.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/opsstation/terraform-aws-db/blob/master/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/yadavprakash/terraform-aws-db/blob/master/LICENSE) file for details.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
@@ -245,7 +245,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/opsstation/terraform-aws-labels.git | v1.0.0 |
+| <a name="module_labels"></a> [labels](#module\_labels) | git::https://github.com/yadavprakash/terraform-aws-labels.git | v1.0.0 |
 
 ## Resources
 
@@ -338,7 +338,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 | <a name="input_license_model"></a> [license\_model](#input\_license\_model) | License model information for this DB instance. Optional, but required for some DB engines, i.e. Oracle SE1 | `string` | `null` | no |
 | <a name="input_maintenance_window"></a> [maintenance\_window](#input\_maintenance\_window) | The window to perform maintenance in. Syntax: 'ddd:hh24:mi-ddd:hh24:mi'. Eg: 'Mon:00:00-Mon:03:00' | `string` | `null` | no |
 | <a name="input_major_engine_version"></a> [major\_engine\_version](#input\_major\_engine\_version) | Specifies the major version of the engine that this option group should be associated with | `string` | `null` | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'opsstation'. | `string` | `"opsstation"` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'yadavprakash'. | `string` | `"yadavprakash"` | no |
 | <a name="input_max_allocated_storage"></a> [max\_allocated\_storage](#input\_max\_allocated\_storage) | Specifies the value for Storage Autoscaling | `number` | `0` | no |
 | <a name="input_monitoring_interval"></a> [monitoring\_interval](#input\_monitoring\_interval) | The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0. Valid Values: 0, 1, 5, 10, 15, 30, 60. | `number` | `0` | no |
 | <a name="input_monitoring_role_description"></a> [monitoring\_role\_description](#input\_monitoring\_role\_description) | Description of the monitoring IAM role | `string` | `null` | no |
@@ -361,7 +361,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 | <a name="input_replica_instance_class"></a> [replica\_instance\_class](#input\_replica\_instance\_class) | The instance type of the RDS instance | `string` | `""` | no |
 | <a name="input_replica_mode"></a> [replica\_mode](#input\_replica\_mode) | Specifies whether the replica is in either mounted or open-read-only mode. This attribute is only supported by Oracle instances. Oracle replicas operate in open-read-only mode unless otherwise specified | `string` | `null` | no |
 | <a name="input_replicate_source_db"></a> [replicate\_source\_db](#input\_replicate\_source\_db) | Specifies that this resource is a Replicate database, and to use this value as the source database. This correlates to the identifier of another Amazon RDS Database to replicate. | `string` | `null` | no |
-| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `"https://github.com/opsstation/terraform-aws-db"` | no |
+| <a name="input_repository"></a> [repository](#input\_repository) | Terraform current module repo | `string` | `"https://github.com/yadavprakash/terraform-aws-db"` | no |
 | <a name="input_restore_to_point_in_time"></a> [restore\_to\_point\_in\_time](#input\_restore\_to\_point\_in\_time) | Restore to a point in time (MySQL is NOT supported) | `map(string)` | `null` | no |
 | <a name="input_s3_import"></a> [s3\_import](#input\_s3\_import) | Restore from a Percona Xtrabackup in S3 (only MySQL is supported) | `map(string)` | `null` | no |
 | <a name="input_sg_description"></a> [sg\_description](#input\_sg\_description) | The security group description. | `string` | `"Instance default security group (only egress access is allowed)."` | no |

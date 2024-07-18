@@ -6,7 +6,7 @@ variable "name" {
 
 variable "repository" {
   type        = string
-  default     = "https://github.com/opsstation/terraform-aws-db"
+  default     = "https://github.com/yadavprakash/terraform-aws-db"
   description = "Terraform current module repo"
 }
 
@@ -24,8 +24,8 @@ variable "label_order" {
 
 variable "managedby" {
   type        = string
-  default     = "opsstation"
-  description = "ManagedBy, eg 'opsstation'."
+  default     = "yadavprakash"
+  description = "ManagedBy, eg 'yadavprakash'."
 }
 
 variable "delimiter" {
