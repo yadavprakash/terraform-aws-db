@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "vpc" {
-  source      = "git::https://github.com/opsstation/terraform-aws-vpc?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-aws-vpc?ref=v1.0.0"
   name        = "vpc"
   environment = "test"
   label_order = ["environment", "name"]
@@ -12,7 +12,7 @@ module "vpc" {
 }
 
 module "private_subnets" {
-  source      = "git::https://github.com/opsstation/terraform-aws-subnet?ref=v1.0.0"
+  source      = "git::https://github.com/yadavprakash/terraform-aws-subnet?ref=v1.0.0"
   name        = "subnets"
   environment = "test"
   label_order = ["name", "environment"]
@@ -72,3 +72,4 @@ module "postgresql" {
   ssm_parameter_endpoint_enabled = true
 
 }
+
