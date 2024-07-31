@@ -20,7 +20,7 @@ To use this module, you can include it in your Terraform configuration. Here's a
 
 ```hcl
 module "mariadb" {
-  source                          = "git::https://github.com/yadavprakash/terraform-aws-db.git?ref=v1.0.0"
+  source                          = "git::https://github.com/yadavprakash/terraform-aws-db.git"
   name                            = "mariadb"
   environment                     = "test"
   label_order                     = ["environment", "name"]
@@ -52,7 +52,7 @@ module "mariadb" {
 ## Example: mysql-complete
 ```hcl
 module "mysql" {
-  source                          = "git::https://github.com/yadavprakash/terraform-aws-db.git?ref=v1.0.0"
+  source                          = "git::https://github.com/yadavprakash/terraform-aws-db.git"
   name                            = "mysql"
   environment                     = "test"
   label_order                     = ["environment", "name"]
@@ -111,7 +111,7 @@ module "mysql" {
 ## Example: oracle_db
 ```hcl
 module "oracle" {
-  source                              = "git::https://github.com/yadavprakash/terraform-aws-db.git?ref=v1.0.0"
+  source                              = "git::https://github.com/yadavprakash/terraform-aws-db.git"
   name                                = "oracle"
   environment                         = "test"
   label_order                         = ["environment", "name"]
@@ -145,7 +145,7 @@ module "oracle" {
 ## Example: postgreSQL
 ```hcl
 module "postgresql" {
-  source                          = "git::https://github.com/yadavprakash/terraform-aws-db.git?ref=v1.0.0"
+  source                          = "git::https://github.com/yadavprakash/terraform-aws-db.git"
   name                            = "postgresql"
   environment                     = "test"
   label_order                     = ["environment", "name"]
@@ -178,7 +178,7 @@ module "postgresql" {
 ## Example: replica-mysql
 ```hcl
 module "mysql" {
-  source                          = "git::https://github.com/yadavprakash/terraform-aws-db.git?ref=v1.0.0"
+  source                          = "git::https://github.com/yadavprakash/terraform-aws-db.git"
   name                            = "rds"
   environment                     = "test"
   label_order                     = ["environment", "name"]
